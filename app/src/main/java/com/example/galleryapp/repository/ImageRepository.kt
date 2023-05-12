@@ -7,6 +7,8 @@ import com.example.galleryapp.model.Image
 
 class ImageRepository(private val contentResolver: ContentResolver) {
 
+
+
     fun getAllImages(): ArrayList<Image> {
         val images = ArrayList<Image>()
         val allImageUri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI

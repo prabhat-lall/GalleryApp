@@ -16,6 +16,8 @@ import com.example.galleryapp.databinding.FragmentMainBinding
 import com.example.galleryapp.factory.GalleryViewModelFactory
 import com.example.galleryapp.model.Image
 import com.example.galleryapp.ui.GalleryViewModel
+import com.example.galleryapp.utils.Constants.IMAGE_NAME
+import com.example.galleryapp.utils.Constants.IMAGE_PATH
 
 
 class MainFragment : Fragment() {
@@ -72,8 +74,8 @@ class MainFragment : Fragment() {
 
     private fun onImageItemClicked(currentImage : Image){
         val bundle = Bundle()
-        bundle.putString("PATH", currentImage.imagePath)
-        bundle.putString("NAME", currentImage.imageName)
+        bundle.putString(IMAGE_PATH, currentImage.imagePath)
+        bundle.putString(IMAGE_NAME, currentImage.imageName)
         findNavController().navigate(R.id.action_mainFragment_to_fullScreenFragment,bundle)
     }
 
